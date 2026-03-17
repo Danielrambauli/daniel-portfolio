@@ -1,78 +1,77 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact | Daniel Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Daniel Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
+    <nav>
+        <h2 class="logo">Daniel@Tech</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="journey.html">Journey</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<h2 class="logo">Daniel@Tech</h2>
+    <section class="contact">
 
-<ul>
+        <h1>Contact Me</h1>
+        <p>
+            Recently completed my Diploma in Information Technology and I am currently available for internship
+            opportunities.
+            If you would like to work together or have any opportunities available, please feel free to contact me.
+        </p>
 
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="journey.html">Journey</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="contact.html">Contact</a></li>
+        <div class="contact-buttons-container">
 
-</ul>
 
-</nav>
+            <!-- Email Button -->
+            <a href="mailto:danielrambauli8@gmail.com">
+                <button class="contact-btn email-btn">
+                    <img src="https://img.icons8.com/ios-filled/24/000000/new-post.png" alt="Email Icon"
+                        class="btn-icon">
+                    Send Me an Email
+                </button>
+            </a>
 
-<section class="contact">
+            <!-- LinkedIn Button -->
+            <a href="https://www.linkedin.com/in/ndivho-daniel-rambauli-747160272" target="_blank">
+                <button class="contact-btn linkedin-btn">
+                    <img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn Icon"
+                        class="btn-icon">
+                    Connect on LinkedIn
+                </button>
+            </a>
 
-<h1>Contact Me</h1>
+        </div>
 
-<p>Recently completed my Diploma in Information Technology and I am currently available for internship opportunities. 
-  If you would like to work together or have any opportunities available, please feel free to contact me.</p>
+    </section>
 
-<div class="contact-info">
+    <script>
+        // JS to show thank you message after submit
+        const form = document.getElementById("contactForm");
+        const success = document.getElementById("successMessage");
 
-<p><strong>Email:</strong> danielrambauli8@gmail.com</p>
-
-<p><strong>Phone:</strong> 0760554447</p>
-
-</div>
-
-<div class="contact-links">
-
-<a href="www.linkedin.com/in/ndivho-daniel-rambauli-747160272" target="_blank">
-<button>LinkedIn</button>
-</a>
-
-<a href="https://github.com/Danielrambauli" target="_blank">
-<button>GitHub</button>
-</a>
-
-</div>
-
-<h2>Send a Message</h2>
-
-<form>
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Your Email" required>
-
-<textarea placeholder="Your Message" rows="5" required></textarea>
-
-<button type="submit">Send Message</button>
-
-</form>
-
-</section>
+        if (form && success) {
+            form.addEventListener("submit", function (e) {
+                // prevent default page reload
+                // form still submits to FormSubmit in a new tab
+                setTimeout(() => {
+                    form.style.display = "none";
+                    success.style.display = "block";
+                }, 500); // small delay to allow form submission
+            });
+        }
+    </script>
 
 </body>
+
 </html>
