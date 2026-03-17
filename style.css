@@ -9,6 +9,7 @@ color:white;
 font-family:Arial;
 
 margin:0;
+overflow-x: hidden; /* Prevents horizontal scroll on mobile */
 
 }
 
@@ -307,57 +308,6 @@ color:white;
 
 }
 
-/* MOBILE RESPONSIVENESS */
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding: 0;
-        text-align: center;
-    }
-
-    .home {
-        margin-top: 40px;
-        padding: 20px;
-    }
-
-    .profile {
-        width: 150px;
-        height: 150px;
-    }
-
-    .typing {
-        font-size: 18px;
-    }
-
-    .about, .journey, .projects, .contact {
-        padding: 30px 20px;
-    }
-
-    .about-img {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    .project-container {
-        grid-template-columns: 1fr;
-    }
-
-    form {
-        width: 100%;
-    }
-
-    form input, form textarea {
-        width: 100%;
-    }
-}
-
 /* CONTACT BUTTONS CONTAINER */
 .contact-buttons-container {
     text-align: center;
@@ -421,8 +371,90 @@ color:white;
     height: 24px;
 }
 
-/* MOBILE RESPONSIVENESS FOR CONTACT CONTROLS */
+/* --- MOBILE RESPONSIVENESS (ALL PAGES) --- */
 @media screen and (max-width: 768px) {
+    /* Navbar */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+        text-align: center;
+    }
+    
+    /* Typography Overrides */
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    /* Home Page */
+    .home {
+        margin-top: 40px;
+        padding: 20px;
+    }
+    
+    .home h1 {
+        font-size: 24px;
+    }
+
+    .home h2 {
+        font-size: 18px;
+    }
+
+    .profile {
+        width: 150px;
+        height: 150px;
+    }
+
+    .typing {
+        font-size: 18px;
+    }
+
+    marquee {
+        font-size: 16px;
+    }
+
+    /* General Sections (About, Journey, Projects, Contact) */
+    .about, .journey, .projects, .contact {
+        padding: 30px 15px;
+    }
+
+    .about-img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Projects */
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    /* Contact Form & Elements */
+    form {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+
+    /* New Contact Buttons Container */
     .contact-buttons-container {
         display: flex;
         flex-direction: column;
@@ -430,6 +462,16 @@ color:white;
         align-items: center;
         padding: 0 10px;
         margin-top: 30px;
+    }
+
+    .contact-buttons-container h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .contact-buttons-container p {
+        font-size: 15px;
+        margin-bottom: 20px;
     }
 
     .contact-buttons-container a {
@@ -442,5 +484,7 @@ color:white;
         width: 100%;
         justify-content: center;
         margin: 0;
+        font-size: 16px;
+        padding: 12px 20px;
     }
 }
